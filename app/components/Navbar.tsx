@@ -1,6 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import SearchFilter from './SearchFilter';
+import UserNav from './UserNav';
+import AddProperty from './AddProperty';
 
 export default function Navbar() {
   return (
@@ -17,6 +20,14 @@ export default function Navbar() {
 
                     </Image>
                 </Link>
+                <div className='flex space-x-6'>
+                  <SearchFilter/>
+
+                </div>
+                <div className="flex items-center space-x-6">
+                  <AddProperty />
+                  <UserNav />
+                </div>
             </div>
         </div>
     </nav>
