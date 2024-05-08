@@ -20,7 +20,7 @@ export default function Navbar() {
 
                     </Image>
                 </Link>
-                <div className='flex space-x-6'>
+                <div className='flex hidden md:block space-x-6'>
                   <SearchFilter/>
 
                 </div>
