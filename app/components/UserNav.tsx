@@ -1,9 +1,17 @@
-import React from 'react'
+'use client';
+
+import React from 'react';
+import { useState } from "react";
+import MenuLink from './MenuLink';
+import useLoginModal from '@/app/hooks/useLoginModal';
+
 
 export default function () {
+  const loginModal = useLoginModal();
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className='p-2 relative inline-block border rounded-full'>
-        <button className='flex items-center'>
+        <button onClick={() => setIsOpen(!isOpen)} className='flex items-center'>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
   <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
 </svg>
@@ -16,6 +24,19 @@ export default function () {
 </svg>
 
         </button>
+
+        {isOpen && (
+          <div className="w-[220px] absolute top-[60px] right-0 bg-white border rounded-xl shadow-md flex flex-col cursor-pointer">
+            <MenuLink label="Login" onClick={() => {
+              setIsOpen(false);
+              loginModal.open();
+            }
+
+            } />
+            <MenuLink label="Sign Up" onClick={() => console.log("Btn clicked")} />
+
+          </div>
+        )}
     </div>
   )
 }
