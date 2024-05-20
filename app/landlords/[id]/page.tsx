@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import ComponentButton from '../../components/ComponentButton.jsx';
+import ComponentButton from '@/app/components/ComponentButton';
 import PropertyList from '@/app/components/properties/PropertyList';
 
 export default function page() {

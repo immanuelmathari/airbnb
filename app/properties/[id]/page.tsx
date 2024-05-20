@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ReservationSidebar from "../../components/properties/ReservationSidebar.jsx"
+import ReservationSidebar from "@/app/components/properties/ReservationSidebar";
 
 const PropertyDetailPage = () => {
     return <main className="max-w-[1500px] mx-auto px-6">

@@ -26,7 +26,7 @@ export default function ConversationDetails() {
     </div>
     <div className="mt-4 py-4 px-6 flex border border-gray-300 space-x-4 rounded-xl">
         <input type="text" placeholder='Type your message here' className="w-full p-2 bg-gray-200 rounded-xl" />
-        <CustomButton label="send" onClick={() => console.log("clicked")} className=" w-[100px] "/>
+        <CustomButton label="send" onClick={() => console.log("clickedd")} className=" w-[100px] "/>
     </div>
     </>
   )
